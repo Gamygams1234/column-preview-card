@@ -1,0 +1,117 @@
+$brightOrange: hsl(31, 77%, 52%);
+$darkCyan: hsl(184, 100%, 22%);
+$veryDarkCyan: hsl(179, 100%, 13%);
+
+body {
+    background-color: hsl(0, 0%, 95%);
+    font-size: 15px;
+    padding: 3em;
+}
+.fw-700 {
+    font-weight: 700;
+    font-family: "Big Shoulders Display", cursive;
+}
+.fw-400 {
+    font-weight: 400;
+    font-family: "Lexend Deca", sans-serif;
+}
+.btn-light {
+    padding: 0.75em 3em;
+    background-color: #f2f2f2;
+    border-radius: 1.7em;
+    font-weight: 400;
+    font-family: "Lexend Deca", sans-serif;
+    border: 2px solid #f2f2f2;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 1em;
+    .grid-item {
+        padding: 3em 3em;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: flex-start;
+        position: relative;
+        .icon {
+            margin-bottom: 2em;
+        }
+        h2 {
+            color: hsl(0, 0%, 95%);
+            margin-bottom: 1em;
+            text-transform: uppercase;
+        }
+        p {
+            color: hsla(0, 0%, 100%, 0.75);
+            line-height: 1.5;
+            margin-bottom: 2em;
+        }
+    }
+    .sedan {
+        background-color: $brightOrange;
+        border-radius: 1em 1em 0 0;
+        .btn-light {
+            color: $brightOrange;
+        }
+        .btn-light:hover {
+            background-color: $brightOrange;
+            color: hsl(0, 0%, 95%);
+        }
+    }
+    .suv {
+        background-color: $darkCyan;
+        .btn-light {
+            color: $darkCyan;
+        }
+        .btn-light:hover {
+            background-color: $darkCyan;
+            color: hsl(0, 0%, 95%);
+        }
+    }
+    .luxury {
+        background-color: $veryDarkCyan;
+        border-radius: 0 0 1em 1em;
+        .btn-light {
+            color: $veryDarkCyan;
+        }
+        .btn-light:hover {
+            background-color: $veryDarkCyan;
+            color: hsl(0, 0%, 95%);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 950px;
+        margin: 0 auto;
+        .grid-item {
+            p {
+                margin-bottom: 10em;
+                line-height: 2;
+            }
+            .btn-light {
+                // justify-self: end;
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 3em;
+            }
+        }
+        .sedan {
+            border-radius: 1em 0 0 1em;
+        }
+        .suv {
+        }
+
+        .luxury {
+            border-radius: 0 1em 1em 0;
+        }
+    }
+}

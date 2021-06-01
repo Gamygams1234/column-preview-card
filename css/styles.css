@@ -1,0 +1,115 @@
+body {
+  background-color: #f2f2f2;
+  font-size: 15px;
+  padding: 3em;
+}
+
+.fw-700 {
+  font-weight: 700;
+  font-family: "Big Shoulders Display", cursive;
+}
+
+.fw-400 {
+  font-weight: 400;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.btn-light {
+  padding: 0.75em 3em;
+  background-color: #f2f2f2;
+  border-radius: 1.7em;
+  font-weight: 400;
+  font-family: "Lexend Deca", sans-serif;
+  border: 2px solid #f2f2f2;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  border-radius: 1em;
+}
+.grid .grid-item {
+  padding: 3em 3em;
+  position: relative;
+}
+.grid .grid-item .icon {
+  margin-bottom: 2em;
+}
+.grid .grid-item h2 {
+  color: #f2f2f2;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+.grid .grid-item p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+  margin-bottom: 2em;
+}
+.grid .sedan {
+  background-color: #e38826;
+  border-radius: 1em 1em 0 0;
+}
+.grid .sedan .btn-light {
+  color: #e38826;
+}
+.grid .sedan .btn-light:hover {
+  background-color: #e38826;
+  color: #f2f2f2;
+}
+.grid .suv {
+  background-color: #006970;
+}
+.grid .suv .btn-light {
+  color: #006970;
+}
+.grid .suv .btn-light:hover {
+  background-color: #006970;
+  color: #f2f2f2;
+}
+.grid .luxury {
+  background-color: #004241;
+  border-radius: 0 0 1em 1em;
+}
+.grid .luxury .btn-light {
+  color: #004241;
+}
+.grid .luxury .btn-light:hover {
+  background-color: #004241;
+  color: #f2f2f2;
+}
+
+@media (min-width: 768px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 100vh;
+  }
+
+  .grid {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 950px;
+    margin: 0 auto;
+  }
+  .grid .grid-item p {
+    margin-bottom: 10em;
+    line-height: 2;
+  }
+  .grid .grid-item .btn-light {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 3em;
+  }
+  .grid .sedan {
+    border-radius: 1em 0 0 1em;
+  }
+  .grid .luxury {
+    border-radius: 0 1em 1em 0;
+  }
+}
